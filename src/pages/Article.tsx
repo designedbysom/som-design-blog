@@ -37,23 +37,11 @@ function Article() {
       <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         {/* Header */}
         <header className="mb-16 space-y-4">
-          <h1 className="text-4xl font-semibold tracking-tight text-zinc-950">
+          <h1 className="text-4xl font-semibold tracking-tight text-zinc-950 text-center w-[88%] mx-auto leading-tight">
             {post.title}
           </h1>
-          <div className="flex flex-wrap items-center gap-4 text-sm">
-            <time className="font-mono text-zinc-400">{formattedDate}</time>
-            {post.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2 py-1 text-zinc-400 border border-zinc-200 rounded-sm"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
+          <div className="text-center text-sm">
+            <time className="font-mono text-zinc-500">{formattedDate}</time>
           </div>
         </header>
 
@@ -64,7 +52,7 @@ function Article() {
               return (
                 <p
                   key={index}
-                  className="text-base leading-[1.5] text-zinc-600 mb-5"
+                  className="text-base leading-[1.5] text-neutral-900 mb-5"
                 >
                   {block.processed}
                 </p>
@@ -75,7 +63,7 @@ function Article() {
               return (
                 <h2
                   key={index}
-                  className="text-xl font-medium tracking-tight text-zinc-950 mt-10 mb-5 first:mt-0"
+                  className="text-xl font-semibold tracking-normal text-zinc-950 mt-10 mb-5 first:mt-0"
                 >
                   {block.text}
                 </h2>
@@ -86,7 +74,7 @@ function Article() {
               return (
                 <h3
                   key={index}
-                  className="text-base font-medium tracking-tight text-zinc-900 mt-10 mb-5"
+                  className="text-base font-semibold tracking-normal text-zinc-900 mt-10 mb-5"
                 >
                   {block.text}
                 </h3>
@@ -110,7 +98,7 @@ function Article() {
                   key={index}
                   className="border-l-4 border-zinc-900 pl-4 py-2 mb-5 not-italic"
                 >
-                  <p className="text-base leading-[1.5] text-zinc-600">
+                  <p className="text-base leading-[1.5] text-neutral-900">
                     {block.text}
                   </p>
                 </blockquote>
@@ -130,7 +118,7 @@ function Article() {
                   {block.processed.map((item, i) => (
                     <li
                       key={i}
-                      className="text-base leading-[1.5] text-zinc-600"
+                      className="text-base leading-[1.5] text-neutral-900"
                     >
                       {item}
                     </li>

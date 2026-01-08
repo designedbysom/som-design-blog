@@ -1,6 +1,7 @@
 export const samplePost = {
   slug: "sample-blog-post",
-  title: "Building Design Systems That Scale",
+  title:
+    "Building Design Systems That Scale Beyond Daily Use To Become Platforms",
   date: "2026-01-07",
   tags: ["Design Systems", "Engineering", "Product Strategy"],
   content: [

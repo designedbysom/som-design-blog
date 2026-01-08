@@ -30,7 +30,7 @@
 - **Canvas:** `#FFFFFF` (Pure White).
 - **Ink (Primary):** `#09090B` (Zinc-950) — Used for Headings and active states.
 - **Graphite (Secondary):** `##3f3f46` (Zinc-700) — Used for Body text.
-- **Stone (Muted):** `#A1A1AA` (Zinc-400) — Used for Metadata, dates, and inactive icons.
+- **Stone (Muted):** `#71717A` (Zinc-500) — Used for Metadata, dates, and inactive icons.
 - **Line:** `#E4E4E7` (Zinc-200) — Used for borders and dividers.
 - **Accent:** `#18181B` (Zinc-900) — Pure black for high-priority interactions (buttons, links).
 
@@ -45,30 +45,31 @@
 **1. Title (H1)**
 
 - **Usage:** Page titles / Article headlines.
-- **Spec:** `Inter Semibold` | 32px (`text-4xl`) | Tracking `-0.03em`.
+- **Spec:** `Inter Semibold` | 32px (`text-4xl`) | Tracking `-0.03em` | Leading `1.25`.
 - **Color:** Zinc-950.
-- **Tailwind:** `text-4xl font-semibold tracking-tight text-zinc-950`
+- **Width:** 88% of parent container.
+- **Tailwind:** `text-4xl font-semibold tracking-tight text-zinc-950 text-center w-[88%] mx-auto leading-tight`
 
 **2. Section Heading (H2)**
 
 - **Usage:** Major article dividers.
-- **Spec:** `Inter Medium` | 20px (`text-xl`) | Tracking `-0.02em`.
+- **Spec:** `Inter Semibold` | 20px (`text-xl`) | Tracking `0em`.
 - **Color:** Zinc-950.
-- **Tailwind:** `text-xl font-medium tracking-tight text-zinc-950`
+- **Tailwind:** `text-xl font-semibold tracking-normal text-zinc-950`
 
 **3. Subheading (H3)**
 
 - **Usage:** Minor categories within a section.
-- **Spec:** `Inter Medium` | 16px (`text-base`) | Tracking `-0.01em`.
+- **Spec:** `Inter Semibold` | 16px (`text-base`) | Tracking `0em`.
 - **Color:** Zinc-900 (Darker than body).
-- **Tailwind:** `text-base font-medium tracking-tight text-zinc-900`
+- **Tailwind:** `text-base font-semibold tracking-normal text-zinc-900`
 
 **4. Body Copy (P)**
 
 - **Usage:** Standard reading text.
-- **Spec:** `Inter Regular` | 16px (`text-base`) | Leading `1.65`.
-- **Color:** Zinc-600.
-- **Tailwind:** `text-base leading-relaxed text-zinc-600`
+- **Spec:** `Inter Regular` | 16px (`text-base`) | Leading `1.5`.
+- **Color:** Neutral-900.
+- **Tailwind:** `text-base leading-[1.5] text-neutral-900`
 
 **5. Body Bold (Strong)**
 
