@@ -58,13 +58,13 @@ function Article() {
         </header>
 
         {/* Content */}
-        <div className="space-y-8 sm:space-y-12">
+        <div>
           {processedContent.map((block, index) => {
             if (block.type === "paragraph" && "processed" in block) {
               return (
                 <p
                   key={index}
-                  className="text-base leading-relaxed text-zinc-600"
+                  className="text-base leading-[1.5] text-zinc-600 mb-5"
                 >
                   {block.processed}
                 </p>
@@ -75,7 +75,7 @@ function Article() {
               return (
                 <h2
                   key={index}
-                  className="text-xl font-medium tracking-tight text-zinc-950 mt-16 first:mt-0"
+                  className="text-xl font-medium tracking-tight text-zinc-950 mt-10 mb-5 first:mt-0"
                 >
                   {block.text}
                 </h2>
@@ -86,7 +86,7 @@ function Article() {
               return (
                 <h3
                   key={index}
-                  className="text-base font-medium tracking-tight text-zinc-900 mt-12"
+                  className="text-base font-medium tracking-tight text-zinc-900 mt-10 mb-5"
                 >
                   {block.text}
                 </h3>
@@ -97,7 +97,7 @@ function Article() {
               return (
                 <pre
                   key={index}
-                  className="bg-zinc-50 border border-zinc-200 rounded-sm p-4 text-[13px] font-mono text-zinc-800 overflow-x-auto"
+                  className="bg-zinc-50 border border-zinc-200 rounded-sm p-4 text-[13px] font-mono text-zinc-800 overflow-x-auto mb-5"
                 >
                   <code>{block.text}</code>
                 </pre>
@@ -108,9 +108,9 @@ function Article() {
               return (
                 <blockquote
                   key={index}
-                  className="border-l-4 border-zinc-900 pl-4 py-2 my-8 not-italic"
+                  className="border-l-4 border-zinc-900 pl-4 py-2 mb-5 not-italic"
                 >
-                  <p className="text-base leading-relaxed text-zinc-600">
+                  <p className="text-base leading-[1.5] text-zinc-600">
                     {block.text}
                   </p>
                 </blockquote>
@@ -123,11 +123,14 @@ function Article() {
               Array.isArray(block.processed)
             ) {
               return (
-                <ul key={index} className="list-disc list-inside space-y-2">
+                <ul
+                  key={index}
+                  className="list-disc list-inside space-y-2 mb-5"
+                >
                   {block.processed.map((item, i) => (
                     <li
                       key={i}
-                      className="text-base leading-relaxed text-zinc-600"
+                      className="text-base leading-[1.5] text-zinc-600"
                     >
                       {item}
                     </li>
