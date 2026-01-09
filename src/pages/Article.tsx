@@ -74,7 +74,7 @@ function Article() {
               return (
                 <h3
                   key={index}
-                  className="text-base font-semibold tracking-normal text-zinc-900 mt-10 mb-5"
+                  className="text-base font-bold tracking-normal text-zinc-900 mt-10 mb-5"
                 >
                   {block.text}
                 </h3>

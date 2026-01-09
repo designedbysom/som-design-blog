@@ -60,9 +60,9 @@
 **3. Subheading (H3)**
 
 - **Usage:** Minor categories within a section.
-- **Spec:** `Inter Semibold` | 16px (`text-base`) | Tracking `0em`.
+- **Spec:** `Inter Bold` | 16px (`text-base`) | Tracking `0em`.
 - **Color:** Zinc-900 (Darker than body).
-- **Tailwind:** `text-base font-semibold tracking-normal text-zinc-900`
+- **Tailwind:** `text-base font-bold tracking-normal text-zinc-900`
 
 **4. Body Copy (P)**
 
