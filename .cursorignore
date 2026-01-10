@@ -1,0 +1,20 @@
+# Lock files (huge, low context value)
+package-lock.json
+
+# Build artifacts
+dist/
+dist-ssr/
+*.map
+
+# Logs
+*.log
+logs/
+
+# Editor files
+.vscode/*
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
