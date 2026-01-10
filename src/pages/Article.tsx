@@ -37,7 +37,7 @@ function Article() {
       <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         {/* Header */}
         <header className="mb-16 space-y-4">
-          <h1 className="text-4xl font-semibold tracking-tight text-zinc-950 text-center w-[88%] mx-auto leading-tight">
+          <h1 className="text-[28px] md:text-4xl font-semibold tracking-tight text-zinc-950 text-center w-[90%] mx-auto leading-tight">
             {post.title}
           </h1>
           <div className="text-center text-sm">
@@ -45,8 +45,19 @@ function Article() {
           </div>
         </header>
 
+        {/* Hero Image */}
+        {post.heroImage && (
+          <div className="my-[60px]">
+            <img
+              src={post.heroImage}
+              alt={post.title}
+              className="w-[96%] h-auto mx-auto"
+            />
+          </div>
+        )}
+
         {/* Content */}
-        <div>
+        <div className="w-[95%] md:w-[90%] mx-auto">
           {processedContent.map((block, index) => {
             if (block.type === "paragraph" && "processed" in block) {
               return (

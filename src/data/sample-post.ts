@@ -3,6 +3,7 @@ export const samplePost = {
   title:
     "Building Design Systems That Scale Beyond Daily Use To Become Platforms",
   date: "2026-01-07",
+  heroImage: "/images/image-1.avif",
   tags: ["Design Systems", "Engineering", "Product Strategy"],
   content: [
     {

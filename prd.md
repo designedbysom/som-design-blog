@@ -48,7 +48,7 @@
 - **Spec:** `Inter Semibold` | 32px (`text-4xl`) | Tracking `-0.03em` | Leading `1.25`.
 - **Color:** Zinc-950.
 - **Width:** 88% of parent container.
-- **Tailwind:** `text-4xl font-semibold tracking-tight text-zinc-950 text-center w-[88%] mx-auto leading-tight`
+- **Tailwind:** `text-4xl font-semibold tracking-tight text-zinc-950 text-center w-[90%] mx-auto leading-tight`
 
 **2. Section Heading (H2)**
 
