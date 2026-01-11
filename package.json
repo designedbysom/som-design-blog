@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/designedbysom/som-design-blog#readme",
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@mdx-js/rollup": "^3.1.1",
     "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",

@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 import { samplePost } from "@/data/sample-post";
 import { processBoldText } from "@/lib/processContent";
 
@@ -36,17 +37,25 @@ function Article() {
     <article className="min-h-screen bg-white">
       <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         {/* Header */}
-        <header className="mb-16 space-y-4">
-          <h1 className="text-4xl font-semibold tracking-tight text-zinc-950 text-center w-[88%] mx-auto leading-tight">
+        <header className="mb-16">
+          <h1 className="text-2xl md:text-4xl font-bold md:font-semibold tracking-tight text-zinc-950 text-center w-[90%] mx-auto leading-tight">
             {post.title}
           </h1>
-          <div className="text-center text-sm">
+          <div className="text-center text-sm mt-8 mb-10">
             <time className="font-mono text-zinc-500">{formattedDate}</time>
           </div>
+          {post.heroImage && (
+            <img
+              src={post.heroImage}
+              alt={post.title}
+              //Margin top 20px, margin bottom 16px, margin left and right auto, block, rounded
+              className="w-[96%] mb-10 mt-10 mx-auto block rounded"
+            />
+          )}
         </header>
 
         {/* Content */}
-        <div>
+        <div className="w-[90%] mx-auto">
           {processedContent.map((block, index) => {
             if (block.type === "paragraph" && "processed" in block) {
               return (
@@ -111,16 +120,14 @@ function Article() {
               Array.isArray(block.processed)
             ) {
               return (
-                <ul
-                  key={index}
-                  className="list-disc list-inside space-y-2 mb-5"
-                >
+                <ul key={index} className="list-none space-y-2 mb-5">
                   {block.processed.map((item, i) => (
                     <li
                       key={i}
-                      className="text-base leading-[1.5] text-neutral-900"
+                      className="text-base leading-[1.5] text-neutral-900 flex items-start"
                     >
-                      {item}
+                      <ArrowRightCircleIcon className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 text-zinc-950" />
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
