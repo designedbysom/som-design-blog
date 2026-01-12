@@ -48,7 +48,6 @@ function Article() {
             <img
               src={post.heroImage}
               alt={post.title}
-              //Margin top 20px, margin bottom 16px, margin left and right auto, block, rounded
               className="w-[96%] mb-10 mt-10 mx-auto block rounded"
             />
           )}
