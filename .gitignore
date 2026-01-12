@@ -7,10 +7,23 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
 dist
 dist-ssr
 *.local
+
+# Git lock files (prevents corruption issues)
+.git/index.lock
+
+# Temporary files
+*.tmp
+*.temp
+
+# Environment files
+.env
+.env.local
+.env.*.local
 
 # Editor directories and files
 .vscode/*
