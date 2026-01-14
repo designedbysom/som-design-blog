@@ -1,14 +1,19 @@
+import { strings } from "@/data/strings";
+import TitleNav from "@/components/TitleNav";
+
 function Home() {
+  const { intro } = strings.home;
+
   return (
-    <div className="home">
-      <h1>Home</h1>
-      {/* Hero Section (The "Manifesto" - short bio & philosophy) */}
-      {/* Experience Table (The "Proof" - Atlassian, past roles, years) */}
-      {/* Latest Writing (The "Signal" - Top 3 recent posts) */}
-      {/* Footer (Social links: LinkedIn, Email) */}
-    </div>
-  )
+    <main className="min-h-screen bg-background text-foreground">
+      <div className="max-w-[800px] mx-auto px-6 py-16 sm:py-24">
+        <TitleNav />
+        <p className="mt-8 text-base leading-relaxed text-foreground/90 max-w-[720px]">
+          {intro}
+        </p>
+      </div>
+    </main>
+  );
 }
 
-export default Home
-
+export default Home;

@@ -34,11 +34,11 @@ function Article() {
   }, [post.content]);
 
   return (
-    <article className="min-h-screen">
-      <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+    <article className="min-h-screen bg-white">
+      <div className="max-w-[800px] mx-auto px-6 py-16 sm:py-24">
         {/* Header */}
         <header className="mb-16">
-          <h1 className="text-2xl md:text-4xl font-bold md:font-semibold tracking-tight text-zinc-950 text-center w-[90%] mx-auto leading-tight">
+          <h1 className="text-2xl md:text-4xl font-bold md:font-semibold tracking-tight text-zinc-950 text-center max-w-[720px] mx-auto leading-[1.2]">
             {post.title}
           </h1>
           <div className="text-center text-sm mt-8 mb-10">
@@ -48,13 +48,13 @@ function Article() {
             <img
               src={post.heroImage}
               alt={post.title}
-              className="w-[96%] mb-10 mt-10 mx-auto block rounded"
+              className="w-full mb-10 mt-10 block rounded"
             />
           )}
         </header>
 
         {/* Content */}
-        <div className="w-[90%] mx-auto">
+        <div className="max-w-[720px] mx-auto">
           {processedContent.map((block, index) => {
             if (block.type === "paragraph" && "processed" in block) {
               return (
