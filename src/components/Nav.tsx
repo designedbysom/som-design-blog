@@ -19,7 +19,7 @@ function Nav() {
               className={`cursor-pointer transition-all duration-150 active:scale-95 inline-block ${
                 isActive
                   ? "opacity-100"
-                  : "opacity-30 hover:opacity-100"
+                  : "opacity-30 hover:opacity-100 hover:underline"
               }`}
             >
               {item.label}
