@@ -18,13 +18,6 @@ function Home() {
           {paragraph.text}
         </p>
       ))}
-      <div className="mt-10 bg-white p-3 pb-12 border border-gray-200 inline-block rounded-sm">
-        <img
-          src="/images/hero-me.png"
-          alt="Som speaking at a conference"
-          className="w-64 h-80 object-cover object-center rounded-none"
-        />
-      </div>
     </div>
   );
 }

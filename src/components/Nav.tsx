@@ -6,7 +6,7 @@ function Nav() {
   const { titlePrefix, navItems } = strings;
 
   return (
-    <nav className="text-sm sm:text-base font-medium font-mono tracking-tight text-foreground">
+    <nav className="text-base font-medium font-mono tracking-tight text-foreground text-center sm:text-left">
       <Link to="/" className="opacity-100 hidden sm:inline">{titlePrefix}</Link>
       <span className="opacity-30">[ </span>
       {navItems.map((item, index) => {
