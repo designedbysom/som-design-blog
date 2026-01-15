@@ -34,7 +34,7 @@ function Article() {
   }, [post.content]);
 
   return (
-    <article className="min-h-screen bg-white">
+    <article>
       <div className="max-w-[800px] mx-auto px-6 py-16 sm:py-24">
         {/* Header */}
         <header className="mb-16">

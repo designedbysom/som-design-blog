@@ -1,18 +1,17 @@
 import { strings } from "@/data/strings";
-import TitleNav from "@/components/TitleNav";
 
 function Home() {
-  const { intro } = strings.home;
+  const { title, intro } = strings.home;
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <div className="max-w-[800px] mx-auto px-6 py-16 sm:py-24">
-        <TitleNav />
-        <p className="mt-8 text-base leading-relaxed text-foreground/90 max-w-[720px]">
-          {intro}
-        </p>
-      </div>
-    </main>
+    <div className="max-w-[800px] mx-auto px-6 py-12 sm:py-16">
+      <h1 className="font-mono text-2xl md:text-3xl font-semibold tracking-tight text-foreground mb-6">
+        {title}
+      </h1>
+      <p className="text-base leading-relaxed text-foreground/90 max-w-[720px]">
+        {intro}
+      </p>
+    </div>
   );
 }
 

@@ -1,21 +1,22 @@
 import { Link, useLocation } from "react-router-dom";
 import { strings } from "@/data/strings";
 
-function TitleNav() {
+function Nav() {
   const location = useLocation();
   const { titlePrefix, navItems } = strings;
 
   return (
-    <h1 className="font-mono text-xl md:text-2xl font-medium tracking-tight text-foreground">
-      <span className="opacity-30">{titlePrefix}</span>
+    <nav className="text-sm sm:text-base font-medium font-mono tracking-tight text-foreground">
+      <Link to="/" className="opacity-100 hidden sm:inline">{titlePrefix}</Link>
       <span className="opacity-30">[ </span>
       {navItems.map((item, index) => {
-        const isActive = location.pathname === item.path;
+        const isActive = location.pathname === item.path || 
+          (item.path === "/" && location.pathname === "/home");
         return (
           <span key={item.path}>
             <Link
               to={item.path}
-              className={`transition-all duration-150 active:scale-95 inline-block ${
+              className={`cursor-pointer transition-all duration-150 active:scale-95 inline-block ${
                 isActive
                   ? "opacity-100"
                   : "opacity-30 hover:opacity-100"
@@ -30,9 +31,8 @@ function TitleNav() {
         );
       })}
       <span className="opacity-30"> ]</span>
-    </h1>
+    </nav>
   );
 }
 
-export default TitleNav;
-
+export default Nav;
