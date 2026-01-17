@@ -46,6 +46,7 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        heading: "hsl(var(--heading))",
       },
     },
   },

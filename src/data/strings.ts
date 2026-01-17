@@ -2,7 +2,6 @@ export const strings = {
   titlePrefix: "~ som.design / ",
   navItems: [
     { label: "home", path: "/" },
-    { label: "writing", path: "/writing" },
     { label: "about", path: "/about" },
   ],
   home: {

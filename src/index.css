@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 0%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -23,6 +23,7 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
+    --heading: 0 0% 100%;
     --radius: 0.5rem;
   }
 }
@@ -41,6 +42,93 @@
   }
   #root {
     min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--background) / 0.75),
+      hsl(var(--background) / 0.65),
+      hsl(var(--background) / 0.75)
+    );
+    backdrop-filter: blur(20px) saturate(100%);
+    -webkit-backdrop-filter: blur(20px) saturate(100%);
+  }
+
+  .figma-frame {
+    border: 1px solid #18A0FB;
+    padding: 2px;
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Top-left corner handle */
+  .figma-frame::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    background: #18A0FB;
+    border: 1px solid #000;
+    z-index: 10;
+  }
+
+  /* Top-right corner handle */
+  .figma-frame::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background: #18A0FB;
+    border: 1px solid #000;
+    z-index: 10;
+  }
+
+  /* Bottom-left and bottom-right corner handles using nested spans */
+  .figma-frame .handle-bottom-left {
+    position: absolute;
+    bottom: -4px;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    background: #18A0FB;
+    border: 1px solid #000;
+    z-index: 10;
+  }
+
+  .figma-frame .handle-bottom-right {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background: #18A0FB;
+    border: 1px solid #000;
+    z-index: 10;
+  }
+
+  .pixel-art-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .pixel-art {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    width: 50%;
+    height: auto;
+    transform: scale(2);
+    transform-origin: top left;
+    filter: contrast(1.2) saturate(1.15);
   }
 }
 

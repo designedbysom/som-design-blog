@@ -38,7 +38,7 @@ function Article() {
       <div className="max-w-[800px] mx-auto px-6 py-16 sm:py-24">
         {/* Header */}
         <header className="mb-16">
-          <h1 className="text-2xl md:text-4xl font-bold md:font-semibold tracking-tight text-zinc-950 text-center max-w-[720px] mx-auto leading-[1.2]">
+          <h1 className="text-2xl md:text-4xl font-bold md:font-semibold tracking-tight text-heading text-center max-w-[720px] mx-auto leading-[1.2]">
             {post.title}
           </h1>
           <div className="text-center text-sm mt-8 mb-10">
@@ -60,7 +60,7 @@ function Article() {
               return (
                 <p
                   key={index}
-                  className="text-base leading-[1.5] text-neutral-900 mb-5"
+                  className="text-base leading-[1.5] text-stone-200 mb-5"
                 >
                   {block.processed}
                 </p>
@@ -71,7 +71,7 @@ function Article() {
               return (
                 <h2
                   key={index}
-                  className="text-xl font-semibold tracking-normal text-zinc-950 mt-10 mb-5 first:mt-0"
+                  className="text-xl font-semibold tracking-normal text-heading mt-10 mb-5 first:mt-0"
                 >
                   {block.text}
                 </h2>
@@ -82,7 +82,7 @@ function Article() {
               return (
                 <h3
                   key={index}
-                  className="text-base font-bold tracking-normal text-zinc-900 mt-10 mb-5"
+                  className="text-base font-bold tracking-normal text-heading mt-10 mb-5"
                 >
                   {block.text}
                 </h3>
@@ -106,7 +106,7 @@ function Article() {
                   key={index}
                   className="border-l-4 border-zinc-900 pl-4 py-2 mb-5 not-italic"
                 >
-                  <p className="text-base leading-[1.5] text-neutral-900">
+                  <p className="text-base leading-[1.5] text-stone-200">
                     {block.text}
                   </p>
                 </blockquote>
@@ -123,7 +123,7 @@ function Article() {
                   {block.processed.map((item, i) => (
                     <li
                       key={i}
-                      className="text-base leading-[1.5] text-neutral-900 flex items-start"
+                      className="text-base leading-[1.5] text-stone-200 flex items-start"
                     >
                       <ArrowRightCircleIcon className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0 text-zinc-950" />
                       <span>{item}</span>

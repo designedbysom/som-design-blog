@@ -3,34 +3,29 @@ import { strings } from "@/data/strings";
 
 function Nav() {
   const location = useLocation();
-  const { titlePrefix, navItems } = strings;
+  const { navItems } = strings;
 
   return (
-    <nav className="text-base font-medium font-mono tracking-tight text-foreground text-center sm:text-left">
-      <Link to="/" className="opacity-100 hidden sm:inline">{titlePrefix}</Link>
-      <span className="opacity-30">[ </span>
-      {navItems.map((item, index) => {
+    <nav className="flex justify-end gap-4">
+      {navItems.map((item) => {
         const isActive = location.pathname === item.path || 
           (item.path === "/" && location.pathname === "/home");
+        const label = `/${item.label}`;
+        
         return (
-          <span key={item.path}>
-            <Link
-              to={item.path}
-              className={`cursor-pointer transition-all duration-150 active:scale-95 inline-block ${
-                isActive
-                  ? "opacity-100"
-                  : "opacity-30 hover:opacity-100 hover:underline"
-              }`}
-            >
-              {item.label}
-            </Link>
-            {index < navItems.length - 1 && (
-              <span className="opacity-30"> | </span>
-            )}
-          </span>
+          <Link
+            key={item.path}
+            to={item.path}
+            className={`font-mono text-sm font-medium px-3 py-1.5 rounded-md transition-colors border ${
+              isActive
+                ? "border-neutral-900 text-white"
+                : "border-transparent text-neutral-500 hover:border-neutral-900"
+            }`}
+          >
+            {label}
+          </Link>
         );
       })}
-      <span className="opacity-30"> ]</span>
     </nav>
   );
 }
