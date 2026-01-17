@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Nav from "@/components/Nav";
 
 function MainNav() {
@@ -20,7 +21,12 @@ function MainNav() {
       }`}
     >
       <div className="max-w-[800px] mx-auto px-6 py-4">
-        <Nav />
+        <div className="flex items-center justify-between">
+          <Link to="/" className="font-mono text-sm text-neutral-500">
+            ~ som.design
+          </Link>
+          <Nav />
+        </div>
       </div>
     </header>
   );
